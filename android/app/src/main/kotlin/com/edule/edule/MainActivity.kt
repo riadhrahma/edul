@@ -1,0 +1,6 @@
+package com.edule.edule
+
+import io.flutter.embedding.android.FlutterActivity
+
+class MainActivity: FlutterActivity() {
+}
