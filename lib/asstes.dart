@@ -1,0 +1,9 @@
+const String textLogo = 'assets/images/text-logo.png';
+const String logoIcon = 'assets/images/logo-icon.png';
+const String logo='assets/images/logo.png';
+const String logo2='assets/images/logo-2.png';
+const String menu='assets/menu.png';
+const String shape9='assets/images/shape/shape-9.png';
+const String shape10='assets/images/shape/shape-10.png';
+const String slider='assets/images/slider/slider-1.png';
+const String shape6='assets/images/shape/shape-6.png';

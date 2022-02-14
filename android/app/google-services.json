@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "359916780413",
+    "project_id": "edule-9aa77",
+    "storage_bucket": "edule-9aa77.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:359916780413:android:f2ec11990cdbc039162a14",
+        "android_client_info": {
+          "package_name": "com.edule.edule"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "359916780413-n60a5hf82ucadj7h333doo90lcllpfit.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAjN2wBHwXum_AFw5BThO-sL_ReD_25lA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "359916780413-n60a5hf82ucadj7h333doo90lcllpfit.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "359916780413-gc6d0rljql6dule1djj02r0dh53m2gn9.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.edule.edule"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

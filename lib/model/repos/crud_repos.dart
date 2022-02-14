@@ -1,4 +1,4 @@
-import 'package:edule/model/instructor.dart';
+
 
 abstract class CrudRepos {
   dynamic fetch({required String id}) {
