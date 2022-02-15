@@ -7,3 +7,5 @@ const String shape9='assets/images/shape/shape-9.png';
 const String shape10='assets/images/shape/shape-10.png';
 const String slider='assets/images/slider/slider-1.png';
 const String shape6='assets/images/shape/shape-6.png';
+const String blog6='assets/images/blog/blog-06.jpg';
+const String author1='assets/images/author/author-01.jpg';

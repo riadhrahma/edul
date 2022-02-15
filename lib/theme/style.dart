@@ -1,4 +1,4 @@
-import 'package:edule/main.dart';
+
 import 'package:edule/theme/color.dart';
 import 'package:flutter/material.dart';
 
@@ -21,6 +21,16 @@ var elevatedButtonStyle2 = ElevatedButton.styleFrom(
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(10),
   ),
+);
+
+var elevatedButtonStyle3 = ElevatedButton.styleFrom(
+  primary: Colors.white,
+  shadowColor: scaffoldBackgroundColor,
+  onSurface: scaffoldBackgroundColor,
+  onPrimary: scaffoldBackgroundColor,
+  elevation: 1.0,
+  fixedSize: const Size(35, 35),
+  shape: const CircleBorder(),
 );
 var inputDecorationTheme =  InputDecorationTheme(
   fillColor: Colors.white,

@@ -1,7 +1,7 @@
 import 'package:edule/asstes.dart';
 import 'package:edule/theme/color.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+
 
 class CustomAppBar extends StatelessWidget {
   const CustomAppBar({Key? key}) : super(key: key);

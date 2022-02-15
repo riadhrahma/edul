@@ -33,9 +33,9 @@ void showLoadingPopUp() {
   closePopUp();
   Get.defaultDialog(
       title: '',
-      content: Container(
+      content: SizedBox(
         height: Get.size.height * 0.21,
-        child: Center(
+        child: const Center(
           child: CircularProgressIndicator(),
         ),
       ));

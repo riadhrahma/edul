@@ -7,9 +7,9 @@ class Info extends StatelessWidget {
   final String subTitle;
   final InfoType infoType;
 
-  const Info(
-      {required this.title, required this.subTitle, required this.infoType})
-      : super();
+   const Info(
+      {Key? key,required this.title, required this.subTitle, required this.infoType})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {

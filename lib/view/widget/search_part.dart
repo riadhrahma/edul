@@ -1,6 +1,5 @@
 import 'package:edule/theme/color.dart';
 import 'package:edule/theme/style.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

@@ -8,20 +8,20 @@ class Review {
   static const _reviewText = 'review_text';
   static const _createdAt = 'created_at';
 
-  final String id;
-  final String studentId;
-  final String courseId;
-  final double ratingValue;
-  final String reviewText;
-  final DateTime createdAt;
+  final String? id;
+  final String? studentId;
+  final String? courseId;
+  final double? ratingValue;
+  final String? reviewText;
+  final DateTime? createdAt;
 
   Review(
-      {required this.id,
-      required this.studentId,
-      required this.courseId,
-      required this.ratingValue,
-      required this.reviewText,
-      required this.createdAt});
+      { this.id,
+       this.studentId,
+       this.courseId,
+       this.ratingValue,
+       this.reviewText,
+       this.createdAt});
 
   Map<String, dynamic> get toMap => {
         _id: id,

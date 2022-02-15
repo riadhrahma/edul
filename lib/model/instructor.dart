@@ -8,24 +8,24 @@ class Instructor {
   static const String _webSiteUrl = 'web_site_url';
   static const String _linkedinUrl = 'linkedin_url';
 
-  final String id;
-  final String name;
-  final String email;
-  final String token;
-  final String description;
-  final String imageUrl;
-  final String webSiteUrl;
-  final String linkedinUrl;
+  final String? id;
+  final String? name;
+  final String? email;
+  final String? token;
+  final String? description;
+  final String? imageUrl;
+  final String? webSiteUrl;
+  final String? linkedinUrl;
 
   Instructor(
-      {required this.id,
-      required this.name,
-      required this.email,
-      required this.token,
-      required this.description,
-      required this.imageUrl,
-      required this.webSiteUrl,
-      required this.linkedinUrl});
+      { this.id,
+       this.name,
+       this.email,
+       this.token,
+       this.description,
+       this.imageUrl,
+       this.webSiteUrl,
+       this.linkedinUrl});
 
   Map<String, dynamic> get toMap => {
         _id: id,

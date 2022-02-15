@@ -16,42 +16,42 @@ class Course {
   static const String _videoLink = 'video_link';
   static const String _isPublic = 'is_public';
 
-  final String id;
-  final String instructorId;
-  final Duration duration;
-  final int lecturesCount;
-  final CourseLevel level;
-  final Language language;
-  final bool certificate;
-  final int enrolledCount;
-  final String description;
-  final String curriculum;
-  final String certification;
-  final String videoLink;
-  final bool isPublic;
+  final String? id;
+  final String? instructorId;
+  final Duration? duration;
+  final int? lecturesCount;
+  final CourseLevel? level;
+  final Language? language;
+  final bool? certificate;
+  final int? enrolledCount;
+  final String? description;
+  final String? curriculum;
+  final String? certification;
+  final String? videoLink;
+  final bool? isPublic;
 
   Course(
-      {required this.id,
-      required this.instructorId,
-      required this.duration,
-      required this.lecturesCount,
-      required this.level,
-      required this.language,
-      required this.certificate,
-      required this.enrolledCount,
-      required this.description,
-      required this.curriculum,
-      required this.certification,
-      required this.videoLink,
-      required this.isPublic});
+      { this.id,
+       this.instructorId,
+       this.duration,
+       this.lecturesCount,
+       this.level,
+       this.language,
+       this.certificate,
+       this.enrolledCount,
+       this.description,
+       this.curriculum,
+       this.certification,
+       this.videoLink,
+       this.isPublic});
 
   Map<String, dynamic> get toMap => {
         _id: id,
         _instructorId: instructorId,
-        _duration: duration.inSeconds,
+        _duration: duration!.inSeconds,
         _lecturesCount: lecturesCount,
-        _level: level.name,
-        _language: language.name,
+        _level: level!.name,
+        _language: language!.name,
         _certificate: certificate,
         _enrolledCount: enrolledCount,
         _description: description,

@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 extension Floater on Widget {
   showOnPopUpFunction([title]) {
 
-    Get.defaultDialog(content: this,title: title==null?'':title);
+    Get.defaultDialog(content: this,title: title ?? '');
   }
 
   void showOnBottomSheetFunction() {

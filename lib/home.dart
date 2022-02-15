@@ -42,7 +42,8 @@ class _HomeState extends State<Home> {
                 });
                 _internet
                     .check()
-                    .then((value) => Navigator.pushNamed(context, '/mainPage'))
+                    .then((value) =>
+                        Navigator.pushReplacementNamed(context, '/mainPage'))
                     .whenComplete(() {
                   setState(() {
                     _showLoading = false;
