@@ -32,6 +32,20 @@ var elevatedButtonStyle3 = ElevatedButton.styleFrom(
   fixedSize: const Size(35, 35),
   shape: const CircleBorder(),
 );
+
+ButtonStyle elevatedButtonStyle4 = OutlinedButton.styleFrom(
+  padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 20),
+  alignment: Alignment.center,
+  backgroundColor: scaffoldBackgroundColor,shape: RoundedRectangleBorder(
+  borderRadius: BorderRadius.circular(10),
+
+),
+  side: const BorderSide(
+    width: 1.0,
+    color: mainColor,
+
+  ),
+);
 var inputDecorationTheme =  InputDecorationTheme(
   fillColor: Colors.white,
   hoverColor: Colors.white,

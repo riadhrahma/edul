@@ -48,9 +48,9 @@ class InstructorRepos extends GetxController with CrudRepos {
   }
 
   @override
-  Instructor object = Instructor();
+  Instructor? object;
   @override
-  String id = '';
+  String? id;
   @override
   String get collection => instructor;
 }

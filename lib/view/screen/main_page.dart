@@ -5,6 +5,7 @@ import 'package:edule/view/widget/custom_app_bar.dart';
 import 'package:edule/view/widget/custom_drawer.dart';
 import 'package:edule/view/widget/edule_rating.dart';
 import 'package:edule/view/widget/fileds_selection.dart';
+import 'package:edule/view/widget/other_course_button.dart';
 import 'package:edule/view/widget/search_part.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -82,13 +83,18 @@ class _MainPageState extends State<MainPage> {
                 child: FieldsSelection(),
               ),
             ),
-            Container(color: Colors.white,
-            child: Column(children: [
-               Padding(
-                 padding: const EdgeInsets.symmetric(horizontal: 18),
-                 child: CourseCard(),
-               ),
-            ],),)
+            Container(
+              color: Colors.white,
+              child: Column(
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 18),
+                    child: CourseCard(),
+                  ),
+                   OtherCourseButton()
+                ],
+              ),
+            )
           ],
         ),
       ),

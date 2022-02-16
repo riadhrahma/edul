@@ -1,4 +1,6 @@
 import 'package:edule/asstes.dart';
+import 'package:edule/model/repos/review_repos.dart';
+import 'package:edule/model/review.dart';
 import 'package:edule/view/widget/edule_courses_count.dart';
 import 'package:edule/view/widget/edule_tutorial_button.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,14 @@ class CoursesInfo extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    ReviewRepos reviewRepos = ReviewRepos();
+                    reviewRepos.object = Review(
+                        id: '45xcwdf5qs545qsd',
+                        studentId: 'sd4fsd4fsdrfer4',
+                        createdAt: DateTime.now());
+                    reviewRepos.add();
+                  },
                   child: Padding(
                     padding: const EdgeInsets.only(
                         top: 19, bottom: 19, right: 16, left: 16),
