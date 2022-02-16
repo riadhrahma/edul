@@ -33,8 +33,8 @@ var elevatedButtonStyle3 = ElevatedButton.styleFrom(
   shape: const CircleBorder(),
 );
 
-ButtonStyle elevatedButtonStyle4 = OutlinedButton.styleFrom(
-  padding: const EdgeInsets.symmetric(vertical: 12,horizontal: 20),
+ButtonStyle outlinedButtonStyle4 = OutlinedButton.styleFrom(
+  padding: const EdgeInsets.symmetric(vertical: 27,horizontal: 35),
   alignment: Alignment.center,
   backgroundColor: scaffoldBackgroundColor,shape: RoundedRectangleBorder(
   borderRadius: BorderRadius.circular(10),

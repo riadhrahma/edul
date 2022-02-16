@@ -1,0 +1,3 @@
+class CostumException implements Exception{
+
+}

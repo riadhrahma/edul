@@ -1,3 +1,4 @@
+import 'package:edule/model/repos/crud_repos.dart';
 import 'package:edule/theme/color.dart';
 import 'package:edule/theme/style.dart';
 import 'package:flutter/cupertino.dart';
@@ -68,7 +69,7 @@ class CourseCard extends StatelessWidget {
                 color: Colors.amber,
               ),
               onRatingUpdate: (rating) {
-                print(rating);
+                rating.log();
               },
             ))
       ],
@@ -82,106 +83,111 @@ class CourseCard extends StatelessWidget {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 14),
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(
-                    top: 8, left: 8, right: 8, bottom: 20),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(17.0),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 8),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 20),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(17.0),
+                    child: Row(
+                      children: [
+                        Expanded(
+                          child: Image.asset(
+                            blog6,
+                            fit: BoxFit.fitWidth,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 13),
                   child: Row(
+                    mainAxisSize: MainAxisSize.max,
                     children: [
-                      Expanded(
+                      ClipOval(
                         child: Image.asset(
-                          blog6,
-                          fit: BoxFit.fitWidth,
+                          author1,
+                          height: 42,
+                          width: 42,
                         ),
                       ),
+                      const Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 7),
+                        child: Text(
+                          'Jason Williams',
+                          style: TextStyle(fontSize: 13, color: subtitleColor),
+                        ),
+                      ),
+                      const Expanded(child: SizedBox()),
+                      ElevatedButton(
+                        style: elevatedButtonStyle2,
+                        onPressed: () {},
+                        child: const Padding(
+                          padding: EdgeInsets.symmetric(vertical: 8),
+                          child: Text(
+                            'Science',
+                            style: TextStyle(
+                                color: mainColor,
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ),
+                      )
                     ],
                   ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 13),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    ClipOval(
-                      child: Image.asset(
-                        author1,
-                        height: 42,
-                        width: 42,
-                      ),
-                    ),
-                    const Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 7),
-                      child: Text(
-                        'Jason Williams',
-                        style: TextStyle(fontSize: 13, color: subtitleColor),
-                      ),
-                    ),
-                    const Expanded(child: SizedBox()),
-                    ElevatedButton(
-                      style: elevatedButtonStyle2,
-                      onPressed: () {},
-                      child: const Padding(
-                        padding: EdgeInsets.symmetric(vertical: 8),
-                        child: Text(
-                          'Science',
-                          style: TextStyle(
-                              color: mainColor,
-                              fontSize: 13,
-                              fontWeight: FontWeight.w400),
-                        ),
-                      ),
-                    )
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 17),
+                  child: Text(
+                    'Data Science and Machine Learning with python - Hands On!',
+                    style: Get.textTheme.headline6!.copyWith(fontSize: 16),
+                  ),
                 ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 17),
-                child: Text(
-                  'Data Science and Machine Learning with python - Hands On!',
-                  style: Get.textTheme.headline6!.copyWith(fontSize: 16),
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 18),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [time, lectures],
-                ),
-              ),
-              Container(
-                decoration: BoxDecoration(
-                  color: scaffoldBackgroundColor,
-                  border:
-                      Border.all(color: scaffoldBackgroundColor, width: 0.3),
-                  borderRadius: const BorderRadius.all(Radius.circular(17)),
-                ),
-                child: Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 18),
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        String.fromCharCode(36) + "420.00",
-                        style: Get.textTheme.headline5!.copyWith(
-                            fontSize: 18,
-                            color: mainColor,
-                            fontWeight: FontWeight.w700),
-                      ),
-                      rating
-                    ],
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [time, lectures],
                   ),
                 ),
-              )
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(bottom: 8),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: scaffoldBackgroundColor,
+                      border: Border.all(
+                          color: scaffoldBackgroundColor, width: 0.3),
+                      borderRadius: const BorderRadius.all(Radius.circular(17)),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 16, horizontal: 16),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            String.fromCharCode(36) + "420.00",
+                            style: Get.textTheme.headline5!.copyWith(
+                                fontSize: 17,
+                                color: mainColor,
+                                fontWeight: FontWeight.w700),
+                          ),
+                          rating
+                        ],
+                      ),
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),

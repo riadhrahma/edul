@@ -15,15 +15,16 @@ mixin CrudRepos on GetxController {
   String? get id => object.id;
   String get collection => instructor;
 
-  _instructionCollection() => collection.collection;
+  CollectionReference<Object?> _instructionCollection() =>
+      collection.collection;
   //short cast of doc
-  docById(String id) =>
+  Future<DocumentSnapshot<Object?>> get docById =>
       _instructionCollection().doc(object == null ? id : object.id).get();
 
   @useResult
   Future<dynamic> fetch() async {
     try {
-      DocumentSnapshot result = await docById(id!);
+      DocumentSnapshot result = await docById;
       if (result.exists) {
         //return data
         return object.fromJson(result.data());
@@ -42,7 +43,7 @@ mixin CrudRepos on GetxController {
 
   Future<void> add() async {
     try {
-      DocumentSnapshot result = await docById(object.id);
+      DocumentSnapshot result = await docById;
 
       ///find out whether exist
       if (result.exists) {
@@ -50,22 +51,22 @@ mixin CrudRepos on GetxController {
         throw '${object.runtimeType} already exist';
       } else {
         //add data
-        await result.reference.parent.add(object.toMap);
+        await result.reference.set(object.toMap);
         '${object.runtimeType} with ${object.id} was added successfully'.log();
       }
     } on FirebaseException catch (e) {
       "${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}".log();
       throw e.message!;
     } catch (e) {
-      'error in: lib/model/repos/crud_repos.dart with: $e type${e.runtimeType} when trying to add ${object.runtimeType}'
+      'error in: lib/model/repos/crud_repos.dart with: $e type ${e.runtimeType} when trying to add ${object.runtimeType}'
           .log();
-      throw 'unknown error';
+      throw 'unknown error with ${e.runtimeType}';
     }
   }
 
   Future<void> delete() async {
     try {
-      DocumentSnapshot result = await docById(id!);
+      DocumentSnapshot result = await docById;
 
       ///check instructor if [isExist]
       if (result.exists) {
@@ -88,7 +89,7 @@ mixin CrudRepos on GetxController {
 
   Future<void> updateData() async {
     try {
-      DocumentSnapshot result = await docById(object.id);
+      DocumentSnapshot result = await docById;
 
       ///check instructor if [isExist]
       if (result.exists) {
@@ -112,7 +113,7 @@ mixin CrudRepos on GetxController {
   @useResult
   Future<bool> isExist({required String id}) async {
     try {
-      DocumentSnapshot result = await docById(id);
+      DocumentSnapshot result = await docById;
 
       ///check course if [isExist]
       return result.exists;

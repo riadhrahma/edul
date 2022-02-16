@@ -6,9 +6,12 @@ class OtherCourseButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(
-        style: elevatedButtonStyle4,
+    return Padding(
+      padding: const EdgeInsets.only(top: 22),
+      child: OutlinedButton(
+          style: outlinedButtonStyle4,
 
-        onPressed: () {}, child: const Text('Other Course'));
+          onPressed: () {}, child: const Text('Other Course')),
+    );
   }
 }

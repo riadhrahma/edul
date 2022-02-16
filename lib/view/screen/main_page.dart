@@ -1,4 +1,5 @@
 import 'package:edule/theme/color.dart';
+import 'package:edule/view/widget/become_instructor.dart';
 import 'package:edule/view/widget/course_card.dart';
 import 'package:edule/view/widget/courses_info.dart';
 import 'package:edule/view/widget/custom_app_bar.dart';
@@ -91,7 +92,14 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.symmetric(horizontal: 18),
                     child: CourseCard(),
                   ),
-                   OtherCourseButton()
+                   Padding(
+                     padding: EdgeInsets.only(bottom: 45),
+                     child: OtherCourseButton(),
+                   ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 50),
+                    child: BecomeInstructor(),
+                  )
                 ],
               ),
             )
