@@ -24,10 +24,11 @@ class CoursesInfo extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: ElevatedButton(
+                key: const Key('riadh'),
                   onPressed: () {
                     ReviewRepos reviewRepos = ReviewRepos();
                     reviewRepos.object = Review(
-                        id: '45xcwdf5qs545qsd',
+                        id: 'sd4fsd4fsdrfer4',
                         studentId: 'sd4fsd4fsdrfer4',
                         createdAt: DateTime.now());
                     reviewRepos.add();

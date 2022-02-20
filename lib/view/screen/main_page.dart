@@ -4,8 +4,10 @@ import 'package:edule/view/widget/course_card.dart';
 import 'package:edule/view/widget/courses_info.dart';
 import 'package:edule/view/widget/custom_app_bar.dart';
 import 'package:edule/view/widget/custom_drawer.dart';
+import 'package:edule/view/widget/edule_info.dart';
 import 'package:edule/view/widget/edule_rating.dart';
 import 'package:edule/view/widget/fileds_selection.dart';
+import 'package:edule/view/widget/how_it_works.dart';
 import 'package:edule/view/widget/other_course_button.dart';
 import 'package:edule/view/widget/search_part.dart';
 import 'package:flutter/material.dart';
@@ -99,9 +101,14 @@ class _MainPageState extends State<MainPage> {
                   Padding(
                     padding: EdgeInsets.only(bottom: 50),
                     child: BecomeInstructor(),
-                  )
+                  ),
+                  HowItWorks(),
+
                 ],
               ),
+            ),const Padding(
+              padding:  EdgeInsets.symmetric(horizontal: 18),
+              child:  EduleInfo(),
             )
           ],
         ),

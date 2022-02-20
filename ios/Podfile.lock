@@ -344,7 +344,7 @@ PODS:
   - BoringSSL-GRPC/Implementation (0.0.7):
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
-  - cloud_firestore (1.0.7):
+  - cloud_firestore (3.1.8):
     - Firebase/Firestore (= 8.11.0)
     - firebase_core
     - Flutter
@@ -401,22 +401,22 @@ PODS:
   - Firebase/Storage (8.11.0):
     - Firebase/CoreOnly
     - FirebaseStorage (~> 8.11.0)
-  - firebase_analytics (7.1.1):
+  - firebase_analytics (9.1.0):
     - Firebase/Analytics (= 8.11.0)
     - firebase_core
     - Flutter
-  - firebase_auth (1.4.1):
+  - firebase_auth (3.3.7):
     - Firebase/Auth (= 8.11.0)
     - firebase_core
     - Flutter
   - firebase_core (1.12.0):
     - Firebase/CoreOnly (= 8.11.0)
     - Flutter
-  - firebase_messaging (9.1.4):
+  - firebase_messaging (11.2.6):
     - Firebase/Messaging (= 8.11.0)
     - firebase_core
     - Flutter
-  - firebase_storage (8.1.3):
+  - firebase_storage (10.2.7):
     - Firebase/Storage (= 8.11.0)
     - firebase_core
     - Flutter
@@ -657,16 +657,16 @@ EXTERNAL SOURCES:
 SPEC CHECKSUMS:
   abseil: 6c8eb7892aefa08d929b39f9bb108e5367e3228f
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
-  cloud_firestore: 59044583635e60717fef32a8193990ec6d1c7e66
+  cloud_firestore: 8bd22e19f6ccf3a0d1976ea298e0ce37c9ad5839
   DKImagePickerController: b5eb7f7a388e4643264105d648d01f727110fc3d
   DKPhotoGallery: fdfad5125a9fdda9cc57df834d49df790dbb4179
   file_picker: 3e6c3790de664ccf9b882732d9db5eaf6b8d4eb1
   Firebase: 44dd9724c84df18b486639e874f31436eaa9a20c
-  firebase_analytics: 9b91eeeb793054515a19b79161c3d2b56d4a7572
-  firebase_auth: a8ec2b9c410628f2b7025ab4587e7b8636cbc1b3
+  firebase_analytics: b267e923ba3cdc892bdcadc01efab50f3b8b7441
+  firebase_auth: 20bf788012988ef04ce608fada5b8d8cd1069302
   firebase_core: 443bccfd6aa6b42f07be365b500773dc69db2d87
-  firebase_messaging: fc7012d1225b24c8d7c4c5fd0fdbe3fd78555cf7
-  firebase_storage: 8ed922a15ce249bae5c8bf83006a3e8544118644
+  firebase_messaging: 8dc3a6f069774a0bf4dac04dd79fdaffcb62e145
+  firebase_storage: 627bc138c31654fc1320b262e16e3fad770dea6f
   FirebaseAnalytics: 4e4b13031034e6561ed3bd1d47b6fdabbd6487c6
   FirebaseAuth: d96d73aba85d192d7a7aa0b86dd6d7f8ec170b4b
   FirebaseCore: 2f4f85b453cc8fea4bb2b37e370007d2bcafe3f0
