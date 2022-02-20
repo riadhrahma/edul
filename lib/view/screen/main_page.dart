@@ -95,21 +95,21 @@ class _MainPageState extends State<MainPage> {
                     padding: EdgeInsets.symmetric(horizontal: 18),
                     child: CourseCard(),
                   ),
-                   Padding(
-                     padding: EdgeInsets.only(bottom: 45),
-                     child: OtherCourseButton(),
-                   ),
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 45),
+                    child: OtherCourseButton(),
+                  ),
                   Padding(
                     padding: EdgeInsets.only(bottom: 50),
                     child: BecomeInstructor(),
                   ),
-                  HowItWorks(),
-
+                 // HowItWorks(),
                 ],
               ),
-            ),const Padding(
-              padding:  EdgeInsets.symmetric(horizontal: 18),
-              child:  EduleInfo(),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 18),
+              child: EduleInfo(),
             ),
             const LastPart()
           ],
