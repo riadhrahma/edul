@@ -8,6 +8,7 @@ var elevatedButtonStyle = ElevatedButton.styleFrom(
   onSurface: accentColor,
   onPrimary: accentColor,
   elevation: 0.0,
+  alignment: Alignment.center,
   shape: RoundedRectangleBorder(
     borderRadius: BorderRadius.circular(10),
   ),

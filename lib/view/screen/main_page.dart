@@ -8,6 +8,7 @@ import 'package:edule/view/widget/edule_info.dart';
 import 'package:edule/view/widget/edule_rating.dart';
 import 'package:edule/view/widget/fileds_selection.dart';
 import 'package:edule/view/widget/how_it_works.dart';
+import 'package:edule/view/widget/last_part.dart';
 import 'package:edule/view/widget/other_course_button.dart';
 import 'package:edule/view/widget/search_part.dart';
 import 'package:flutter/material.dart';
@@ -109,7 +110,8 @@ class _MainPageState extends State<MainPage> {
             ),const Padding(
               padding:  EdgeInsets.symmetric(horizontal: 18),
               child:  EduleInfo(),
-            )
+            ),
+            const LastPart()
           ],
         ),
       ),
