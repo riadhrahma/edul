@@ -53,7 +53,7 @@ class BecomeInstructor extends StatelessWidget {
                 padding: const EdgeInsets.only(bottom: 18),
                 child: ElevatedButton(
                     onPressed: () {
-
+                        Get.toNamed('contactUsPage');
                     },
                     child: Padding(
                       padding: const EdgeInsets.only(

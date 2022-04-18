@@ -5,15 +5,9 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-
-
-
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(
-
-  );
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -25,23 +19,20 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       enableLog: true,
-
-      defaultTransition: Transition.cupertino,
       opaqueRoute: Get.isOpaqueRouteDefault,
       popGesture: Get.isPopGestureEnable,
       transitionDuration: Get.defaultTransitionDuration,
       title: 'edule',
-      initialRoute: '/',
+      initialRoute: '/mainPage',
       routes: routs,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: mainColorSwatch,
-        elevatedButtonTheme: ElevatedButtonThemeData(style: elevatedButtonStyle),
-        inputDecorationTheme: inputDecorationTheme,
-        fontFamily: 'Gordita'
-
-      ),
-
+          primarySwatch: mainColorSwatch,
+          elevatedButtonTheme:
+              ElevatedButtonThemeData(style: elevatedButtonStyle),
+          inputDecorationTheme: inputDecorationTheme,
+          fontFamily: 'Gordita'),
+      defaultTransition: Transition.upToDown,
     );
   }
 }
