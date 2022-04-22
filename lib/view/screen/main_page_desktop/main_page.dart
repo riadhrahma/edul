@@ -13,14 +13,16 @@ import 'package:edule/view/widget/search_part.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class MainPage extends StatefulWidget {
-  const MainPage({Key? key}) : super(key: key);
+import '../../widget/desktop/contact_info_bar.dart';
+
+class MainPageDesktop extends StatefulWidget {
+  const MainPageDesktop({Key? key}) : super(key: key);
 
   @override
   _MainPageState createState() => _MainPageState();
 }
 
-class _MainPageState extends State<MainPage> {
+class _MainPageState extends State<MainPageDesktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,6 +32,7 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
+            const ContactInfoBar(),
             const Padding(
               padding: EdgeInsets.only(top: 30, right: 18, left: 18),
               child: CustomAppBar(),

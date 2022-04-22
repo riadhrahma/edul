@@ -7,10 +7,23 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class CoursesInfo extends StatelessWidget {
+  static const List<String> buttonsTitle = [
+    'Home',
+    'All Course',
+    'Pages',
+    'Blog',
+    'Contact'
+  ];
   const CoursesInfo({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    final buttons = Row(
+      mainAxisSize: MainAxisSize.max,
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      crossAxisAlignment: CrossAxisAlignment.center,
+      children:  buttonsTitle.map((e) => Text(e)).toList(),
+    );
     return Row(
       mainAxisSize: MainAxisSize.max,
       crossAxisAlignment: CrossAxisAlignment.end,
@@ -24,7 +37,7 @@ class CoursesInfo extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20, left: 20),
               child: ElevatedButton(
-                key: const Key('riadh'),
+                  key: const Key('riadh'),
                   onPressed: () {
                     ReviewRepos reviewRepos = ReviewRepos();
                     reviewRepos.object = Review(

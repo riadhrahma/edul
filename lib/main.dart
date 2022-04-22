@@ -1,6 +1,7 @@
 import 'package:edule/routs.dart';
 import 'package:edule/theme/color.dart';
 import 'package:edule/theme/style.dart';
+import 'package:edule/view/screen/main_page_wrapper.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -23,8 +24,9 @@ class MyApp extends StatelessWidget {
       popGesture: Get.isPopGestureEnable,
       transitionDuration: Get.defaultTransitionDuration,
       title: 'edule',
-      initialRoute: '/mainPage',
-      routes: routs,
+      //initialRoute: '/MainPageWrapper',
+      //routes: routs,
+      home: const MainPageWrapper(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: mainColorSwatch,

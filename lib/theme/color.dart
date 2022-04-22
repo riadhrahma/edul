@@ -23,3 +23,4 @@ const Color errorColor = Color(0x2abb2124);
 const Color scaffoldBackgroundColor = Color(0xffEEFBF3);
 const Color subtitleColor=Color(0xff52565b);
 const Color accentColor=Color(0xff242B34);
+const Color lightGreenColor=Color(0xff309255);

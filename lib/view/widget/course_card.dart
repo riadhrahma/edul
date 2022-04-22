@@ -11,9 +11,10 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 
 class CourseCard extends StatelessWidget {
   const CourseCard({Key? key}) : super(key: key);
-
+   Size size(BuildContext context) => MediaQuery.of(context).size;
   @override
   Widget build(BuildContext context) {
+
     final time = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -77,6 +78,8 @@ class CourseCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(vertical: 18),
       child: Container(
+        constraints:  const  BoxConstraints(maxWidth: 400,
+          maxHeight: 700,),
         decoration: BoxDecoration(
           border: Border.all(color: mainColor, width: 0.3),
           borderRadius: const BorderRadius.all(Radius.circular(17)),
@@ -120,7 +123,8 @@ class CourseCard extends StatelessWidget {
                         padding: EdgeInsets.symmetric(horizontal: 7),
                         child: Text(
                           'Jason Williams',
-                          style: TextStyle(fontSize: 13, color: subtitleColor),
+                          style:
+                              TextStyle(fontSize: 13, color: subtitleColor),
                         ),
                       ),
                       const Expanded(child: SizedBox()),
@@ -164,7 +168,8 @@ class CourseCard extends StatelessWidget {
                       color: scaffoldBackgroundColor,
                       border: Border.all(
                           color: scaffoldBackgroundColor, width: 0.3),
-                      borderRadius: const BorderRadius.all(Radius.circular(17)),
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(17)),
                     ),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
