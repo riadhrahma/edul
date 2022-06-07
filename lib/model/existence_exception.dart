@@ -1,4 +1,4 @@
-class ExistenceException {
+class ExistenceException implements Exception{
   final String exceptionValue;
   ExistenceException({required this.exceptionValue});
 

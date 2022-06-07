@@ -1,15 +1,13 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart'
+    show BuildContext, Widget, showModalBottomSheet;
 import 'package:get/get.dart';
 
-
 extension Floater on Widget {
-  showOnPopUpFunction([title]) {
-
-    Get.defaultDialog(content: this,title: title ?? '');
+  void showOnPopUpFunction([title]) {
+    Get.defaultDialog(content: this, title: title ?? '');
   }
 
   void showOnBottomSheetFunction() {
-
     showModalBottomSheet(
         context: Get.context!,
         builder: (BuildContext bc) {
@@ -17,6 +15,6 @@ extension Floater on Widget {
         });
   }
 
-  get showOnBottomSheet => showOnBottomSheetFunction();
-  get showOnPopUp => showOnPopUpFunction();
+  void get showOnBottomSheet => showOnBottomSheetFunction();
+  void get showOnPopUp => showOnPopUpFunction();
 }

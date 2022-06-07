@@ -11,4 +11,6 @@ class InstructorRepos extends GetxController with CrudRepos, AuthRepos {
   String? id;
   @override
   String get collection => instructor;
+  @override
+  String toString() => 'this InstructorRepos actually work on id: $id';
 }

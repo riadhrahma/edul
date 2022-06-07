@@ -13,11 +13,11 @@ class ContactInfoBar extends StatelessWidget {
     final firstPart = RichText(
         text: const TextSpan(
             text: 'All course 28% off for ',
-            style: TextStyle(fontSize: 16, color: Colors.white),
+            style: TextStyle(fontSize: 16, color: Colors.white,fontWeight: FontWeight.w100,),
             children: [
           TextSpan(
             text: "Liberian people's",
-            style: TextStyle(color: lightGreenColor, fontSize: 16),
+            style: TextStyle(color: lightGreenColor, fontSize: 16,fontWeight: FontWeight.w100,),
           ),
         ]));
 
@@ -37,7 +37,7 @@ class ContactInfoBar extends StatelessWidget {
         Text(
           '(970)262-1413',
           style: TextStyle(
-            color: Colors.white,
+            color: Colors.white,fontWeight: FontWeight.w100,
             fontSize: 16,
           ),
         ),
@@ -58,7 +58,7 @@ class ContactInfoBar extends StatelessWidget {
         ),
         Text(
           'adress@gmail.com',
-          style: TextStyle(
+          style: TextStyle(fontWeight: FontWeight.w100,
             color: Colors.white,
             fontSize: 16,
           ),
@@ -70,10 +70,8 @@ class ContactInfoBar extends StatelessWidget {
     final socialMedia = Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 16,
-          ),
+        TextButton(
+          onPressed: () {},
           child: SvgPicture.asset(
             facebook,
             color: Colors.white,
@@ -81,10 +79,8 @@ class ContactInfoBar extends StatelessWidget {
             width: 25,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 16,
-          ),
+        TextButton(
+          onPressed: () {},
           child: SvgPicture.asset(
             twitter,
             height: 25,
@@ -92,10 +88,8 @@ class ContactInfoBar extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 16,
-          ),
+        TextButton(
+          onPressed: () {},
           child: SvgPicture.asset(
             skype,
             height: 25,
@@ -103,17 +97,15 @@ class ContactInfoBar extends StatelessWidget {
             color: Colors.white,
           ),
         ),
-        Padding(
-          padding: const EdgeInsets.only(
-            right: 16,
-          ),
+        TextButton(
+          onPressed: () {},
           child: SvgPicture.asset(
             instagram,
             height: 25,
             width: 25,
             color: Colors.white,
           ),
-        )
+        ),
       ],
     );
 
@@ -122,7 +114,7 @@ class ContactInfoBar extends StatelessWidget {
       color: accentColor,
       child: Center(
         child: Padding(
-          padding: const EdgeInsets.all(6.0),
+          padding: const EdgeInsets.symmetric(vertical: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,

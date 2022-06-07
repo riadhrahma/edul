@@ -3,7 +3,7 @@ import 'package:edule/firebase_db_config/collections.dart';
 import 'package:edule/firebase_db_config/extension/collection.dart';
 import 'package:edule/model/existence_exception.dart';
 import 'package:get/get.dart';
-import 'package:meta/meta.dart';
+import 'package:meta/meta.dart' show useResult;
 import 'dart:developer' as devtools show log;
 
 extension Log on Object {
@@ -36,7 +36,7 @@ mixin CrudRepos on GetxController {
       }
     } on ExistenceException catch (e) {
       '🟡 ${object.runtimeType} with id: ${object.id} is not exist'.log();
-      throw  e.exception;
+      throw Exception(e.exception);
     } on FirebaseException catch (e) {
       "🔴 ${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}"
           .log();
@@ -73,7 +73,7 @@ mixin CrudRepos on GetxController {
       'no command executed'.log();
       '🟡 ${object.runtimeType} with id equal to ${object.id} is already exist'
           .log();
-      throw  e.exception;
+      throw e.exception;
     } on FirebaseException catch (e) {
       "🔴 ${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}"
           .log();
@@ -107,15 +107,15 @@ mixin CrudRepos on GetxController {
       }
     } on ExistenceException catch (e) {
       '🟡 ${object.runtimeType} with id: ${object.id} is not exist'.log();
-      throw  e.exception;
+      throw Exception(e.exception);
     } on FirebaseException catch (e) {
       "🔴 ${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}"
           .log();
-      throw e.message!;
+      throw Exception(e.message!);
     } catch (e) {
       '🔴 error in: lib/model/repos/crud_repos.dart with: $e type${e.runtimeType} when trying to delete ${object.runtimeType}'
           .log();
-      throw e.toString();
+      throw Exception(e.toString());
     } finally {
       'deleting command is finished after ${DateTime.now().difference(now).inMilliseconds} MS'
           .log();
@@ -135,19 +135,19 @@ mixin CrudRepos on GetxController {
         '✅ ${object.runtimeType} with ${object.id} was updated successfully'
             .log();
       } else {
-        throw '${object.runtimeType} not exist';
+        throw Exception('${object.runtimeType} not exist');
       }
     } on ExistenceException catch (e) {
       '🟡 ${object.runtimeType} with id: ${object.id} is not exist'.log();
-      throw  e.exception;
+      throw Exception(e.exception);
     } on FirebaseException catch (e) {
       "🔴  ${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}"
           .log();
-      throw e.message!;
+      throw Exception(e.message);
     } catch (e) {
       '🔴 error in: lib/model/repos/crud_repos.dart with: $e type${e.runtimeType} when trying to update ${object.runtimeType}'
           .log();
-      throw e.toString();
+      throw Exception(e);
     } finally {
       'updating command is finished after ${DateTime.now().difference(now).inMilliseconds} MS'
           .log();

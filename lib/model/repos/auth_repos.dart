@@ -19,15 +19,15 @@ mixin AuthRepos on GetxController {
       }
     } on ExistenceException catch (e) {
       '🟡 no user value'.log();
-      throw e.exception;
+      throw Exception(e.exception);
     } on FirebaseException catch (e) {
       '🔴 error in: lib/model/repos/auth_repos.dart with: $e type${e.runtimeType} when trying to create a user'
           .log();
-      throw e.message!;
+      throw Exception(e.message!);
     } catch (e) {
       '🔴 error in: lib/model/repos/auth_repos.dart with: $e type${e.runtimeType} when trying to create a user'
           .log();
-      throw e.toString();
+      throw Exception(e.toString());
     } finally {
       'creating account command is finished after ${DateTime.now().difference(now).inMilliseconds} MS'
           .log();
@@ -48,14 +48,14 @@ mixin AuthRepos on GetxController {
       }
     } on ExistenceException catch (e) {
       '🟡 no user value'.log();
-      throw e.exception;
+      throw Exception(e.exception);
     } on FirebaseException catch (e) {
       "${e.plugin.toUpperCase()} Message: ${e.message} code: ${e.code}".log();
-      throw e.message!;
+      throw Exception(e.message!);
     } catch (e) {
       '🔴 error in: lib/model/repos/auth_repos.dart with: $e type${e.runtimeType} when trying to connect a user'
           .log();
-      throw e.toString();
+      throw Exception(e.toString());
     } finally {
       'creating account command is finished after ${DateTime.now().difference(now).inMilliseconds} MS'
           .log();

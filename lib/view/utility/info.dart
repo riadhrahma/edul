@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' show BuildContext, Key, ListTile, StatelessWidget, Text, Widget;
 import 'package:get/get.dart';
 import 'package:edule/theme/color.dart';
 
