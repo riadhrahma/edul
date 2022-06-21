@@ -1,20 +1,19 @@
 import 'package:edule/asstes.dart';
 import 'package:edule/theme/color.dart';
-import 'package:edule/view/widget/become_instructor.dart';
-import 'package:edule/view/widget/course_card.dart';
-import 'package:edule/view/widget/custom_drawer.dart';
+
+import 'package:edule/view/widget/desktop/become_instructor_desktop.dart';
+import 'package:edule/view/widget/desktop/contact_info_bar.dart';
+import 'package:edule/view/widget/desktop/course_card_desktop.dart';
+import 'package:edule/view/widget/desktop/custom_app_bar.dart';
 import 'package:edule/view/widget/desktop/edule_courses_count.dart';
-import 'package:edule/view/widget/edule_info.dart';
+import 'package:edule/view/widget/desktop/edule_info_desktop.dart';
+import 'package:edule/view/widget/desktop/fields_selection_desktop.dart';
+import 'package:edule/view/widget/desktop/search_part_desktop.dart';
 import 'package:edule/view/widget/edule_rating.dart';
-import 'package:edule/view/widget/fields_selection.dart';
 import 'package:edule/view/widget/last_part.dart';
 import 'package:edule/view/widget/other_course_button.dart';
-import 'package:edule/view/widget/search_part.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../widget/desktop/contact_info_bar.dart';
-import '../../widget/desktop/custom_app_bar.dart';
 
 class MainPageDesktop extends StatefulWidget {
   const MainPageDesktop({Key? key}) : super(key: key);
@@ -27,7 +26,7 @@ class _MainPageState extends State<MainPageDesktop> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const CustomDrawer(),
+
       backgroundColor: scaffoldBackgroundColor,
       body: SingleChildScrollView(
         child: Column(
@@ -87,7 +86,8 @@ class _MainPageState extends State<MainPageDesktop> {
                                     children: <TextSpan>[
                                       TextSpan(
                                         text: 'bright career.',
-                                        style: Get.textTheme.headline6!.copyWith(
+                                        style:
+                                            Get.textTheme.headline6!.copyWith(
                                           color: mainColor,
                                           fontSize: 41,
                                         ),
@@ -111,12 +111,13 @@ class _MainPageState extends State<MainPageDesktop> {
                               ),
                               ElevatedButton(
                                   key: const Key('riadh'),
-                                  onPressed: () {
-
-                                  },
+                                  onPressed: () {},
                                   child: Padding(
                                     padding: const EdgeInsets.only(
-                                        top: 19, bottom: 19, right: 16, left: 16),
+                                        top: 19,
+                                        bottom: 19,
+                                        right: 16,
+                                        left: 16),
                                     child: Text(
                                       'Start A Course',
                                       style: Get.textTheme.subtitle2!
@@ -138,8 +139,7 @@ class _MainPageState extends State<MainPageDesktop> {
                 ],
               ),
             ),
-
-            const SearchPart(),
+            const SearchPartDesktop(),
             Container(
               color: Colors.white,
               child: const Padding(
@@ -147,30 +147,64 @@ class _MainPageState extends State<MainPageDesktop> {
                   left: 18,
                   right: 18,
                 ),
-                child: FieldsSelection(),
+                child: FieldsSelectionDesktop(),
               ),
             ),
             Container(
               color: Colors.white,
               child: Column(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 18,
-                    ),
-                    child: CourseCard(),
+                children:  [
+                  Wrap(
+                    children: const[
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ), Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCardDesktop(),
+                      ),
+
+                    ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(
-                      bottom: 45,
+                      bottom: 70,
                     ),
                     child: OtherCourseButton(),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(
                       bottom: 50,
                     ),
-                    child: BecomeInstructor(),
+                    child: BecomeInstructorDesktop(),
                   ),
                   // HowItWorks(),
                 ],
@@ -180,7 +214,7 @@ class _MainPageState extends State<MainPageDesktop> {
               padding: EdgeInsets.symmetric(
                 horizontal: 18,
               ),
-              child: EduleInfo(),
+              child: EduleInfoDesktop(),
             ),
             const LastPart()
           ],

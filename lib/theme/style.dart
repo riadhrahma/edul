@@ -51,6 +51,7 @@ var inputDecorationTheme =  InputDecorationTheme(
   fillColor: Colors.white,
   hoverColor: Colors.white,
 alignLabelWithHint: true,
+  hintStyle:  TextStyle(color: Colors.black.withOpacity(0.6)),
 
 
 

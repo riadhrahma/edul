@@ -26,7 +26,8 @@ class MyApp extends StatelessWidget {
       title: 'edule',
       //initialRoute: '/MainPageWrapper',
       //routes: routs,
-      home: const MainPageWrapper(),
+      initialRoute: Routes.initPage,
+      routes: Routes.routs,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           primarySwatch: mainColorSwatch,

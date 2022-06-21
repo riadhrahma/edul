@@ -12,9 +12,13 @@ const String author1 = 'assets/images/author/author_01.jpg';
 const String shape15 = 'assets/images/shape/shape-15.png';
 const String shape2 = 'assets/images/shape/shape-2.png';
 const String shape3 = 'assets/images/shape/shape-3.png';
+const String shape4 = 'assets/images/shape/shape-4.png';
+const String shape13 = 'assets/images/shape/shape-13.png';
+
 const String facebook = 'assets/svg/facebook.svg';
 const String instagram = 'assets/svg/instagram.svg';
 const String skype = 'assets/svg/skype.svg';
 const String twitter = 'assets/svg/twitter.svg';
 const String arrowLeft = 'assets/images/shape/shape-1.png';
 const String arrowRight = 'assets/images/shape/shape-2.png';
+const String registerLogin='assets/images/register-login.png';

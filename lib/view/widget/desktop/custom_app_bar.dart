@@ -1,4 +1,5 @@
 import 'package:edule/asstes.dart';
+import 'package:edule/routs.dart';
 import 'package:edule/theme/color.dart';
 import 'package:edule/view/widget/desktop/app_bar_button.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +34,9 @@ class CustomAppBar extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.only(right: 12),
           child: TextButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.signInDesktop);
+            },
             child: const Text(
               'Sign In',
               style: TextStyle(

@@ -89,16 +89,52 @@ class _MainPageState extends State<MainPage> {
             Container(
               color: Colors.white,
               child: Column(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 18),
-                    child: CourseCard(),
+                children: [
+                  Wrap(
+                    children: const [
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(
+                          horizontal: 18,
+                        ),
+                        child: CourseCard(),
+                      ),
+                    ],
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(bottom: 45),
                     child: OtherCourseButton(),
                   ),
-                  Padding(
+                  const Padding(
                     padding: EdgeInsets.only(bottom: 50),
                     child: BecomeInstructor(),
                   ),
